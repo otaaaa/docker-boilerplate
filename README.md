@@ -99,3 +99,16 @@ docker run -it --rm \
 ```
 chmod +x bin/run
 ```
+
+
+# Machine Learning
+
+```
+docker run -it --rm \
+  --entrypoint bash \
+  condaforge/miniforge3 -c "conda install -y numpy && \
+                            conda install -y pandas && \
+                            conda install -y jupyter && \
+                            conda install -y matplotlib && \
+                            exec /bin/bash"
+```
