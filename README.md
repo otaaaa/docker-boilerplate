@@ -4,7 +4,7 @@
 
 ### Run Node.js scripts
 
-```
+```bash
 docker run -it --rm \
   -e HOME=/usr/src/app \
   -v $(pwd):/usr/src/app \
@@ -14,7 +14,7 @@ docker run -it --rm \
 
 ### Run bash in interactive mode
 
-```
+```bash
 docker run -it --rm \
   -e HOME=/usr/src/app \
   -v $(pwd):/usr/src/app \
@@ -24,7 +24,7 @@ docker run -it --rm \
 
 ### Run bash script as stdin
 
-```
+```bash
 docker run -it --rm \
   -e HOME=/usr/src/app \
   -v $(pwd):/usr/src/app \
@@ -37,7 +37,7 @@ docker run -it --rm \
 
 # Puppeteer
 
-```
+```bash
 docker run -i --init --cap-add=SYS_ADMIN --rm \
   -e PUPPETEER_EXECUTABLE_PATH=/usr/bin/google-chrome-stable \
   -v $(pwd):/home/pptruser \
@@ -50,7 +50,7 @@ docker run -i --init --cap-add=SYS_ADMIN --rm \
 
 # Ruby
 
-```
+```bash
 docker run -it --rm \
   -e HOME=/usr/src/app \
   -v $(pwd):/usr/src/app \
@@ -60,7 +60,7 @@ docker run -it --rm \
 
 # Python
 
-```
+```bash
 docker run -it --rm \
   -e HOME=/usr/src/app \
   -v $(pwd):/usr/src/app \
@@ -70,7 +70,7 @@ docker run -it --rm \
 
 # Terraform
 
-```
+```bash
 docker run --rm -it \
   -e GOOGLE_APPLICATION_CREDENTIALS=/tmp/secrets/key.json \
   -v $GOOGLE_APPLICATION_CREDENTIALS:/tmp/secrets/key.json:ro \
@@ -83,7 +83,7 @@ docker run --rm -it \
 
 # bin/run
 
-```
+```bash
 #!/bin/sh -eu
 
 readonly PYTHON_VERSION=3.9
@@ -96,14 +96,14 @@ docker run -it --rm \
   python:${PYTHON_VERSION} python main.py
 ```
 
-```
+```bash
 chmod +x bin/run
 ```
 
 
 # Machine Learning
 
-```
+```bash
 docker run -it --rm \
   --entrypoint bash \
   condaforge/miniforge3 -c "conda install -y numpy && \
