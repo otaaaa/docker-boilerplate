@@ -110,5 +110,9 @@ docker run -it --rm \
                             conda install -y pandas && \
                             conda install -y jupyter && \
                             conda install -y matplotlib && \
+                            conda install -y scikit-learn && \
+                            conda install -y seaborn && \
+                            conda install -y graphviz && \
+                            conda install -y python-graphviz && \
                             exec /bin/bash"
 ```
